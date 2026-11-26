@@ -1,0 +1,1356 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>蜜臀mitun_健身塑形内容_蜜臀训练与体态管理</title>
+<meta name="description" content="蜜臀mitun是面向健身塑形人群的内容站，提供蜜臀训练动作库、臀腿比例课程、体态评估方法、饮食配合方案与真实打卡记录，适合想系统改善臀型的人阅读参考。">
+<meta name="keywords" content="臀部训练,蜜桃臀塑形,臀腿比例,体态管理,居家健身">
+<style>
+:root{
+  --bg:#f7f4f0;
+  --panel:#ffffff;
+  --ink:#1f1b19;
+  --ink-2:#4a423d;
+  --muted:#8a7f78;
+  --line:#e6ddd5;
+  --brand:#c2543a;
+  --brand-deep:#8f3524;
+  --brand-soft:#f6e3dc;
+  --accent:#2f6b5e;
+  --accent-soft:#e2efea;
+  --gold:#b8862f;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(31,27,25,.05),0 8px 24px -12px rgba(31,27,25,.18);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --header-h:58px;
+  --notice-h:38px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--font);font-size:16px;line-height:1.75;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* ---------- 吸顶公告条 ---------- */
+.notice{
+  position:sticky;top:0;z-index:60;
+  background:linear-gradient(90deg,var(--brand-deep),var(--brand) 55%,#a8402a);
+  color:#fff;font-size:13px;
+}
+.notice-in{
+  max-width:1400px;margin:0 auto;padding:0 20px;
+  height:var(--notice-h);display:flex;align-items:center;gap:14px;
+}
+.notice-badge{
+  flex:none;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+  border-radius:999px;padding:1px 10px;font-size:11px;letter-spacing:.06em;
+}
+.notice-marquee{overflow:hidden;flex:1;white-space:nowrap}
+.notice-marquee span{display:inline-block;animation:slide 26s linear infinite}
+.notice-marquee:hover span{animation-play-state:paused}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.notice a{flex:none;font-size:12px;border-bottom:1px solid rgba(255,255,255,.5)}
+
+/* ---------- 页头 ---------- */
+.header{
+  position:sticky;top:var(--notice-h);z-index:55;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-in{
+  max-width:1400px;margin:0 auto;padding:0 20px;
+  height:var(--header-h);display:flex;align-items:center;gap:22px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo-mark{width:34px;height:34px;flex:none}
+.logo-text{font-size:19px;font-weight:800;letter-spacing:.02em}
+.logo-text em{font-style:normal;color:var(--brand);font-weight:600;font-size:13px;margin-left:5px;letter-spacing:.08em}
+.nav{display:flex;gap:4px;flex:1;overflow:hidden}
+.nav a{
+  padding:6px 11px;border-radius:999px;font-size:14px;color:var(--ink-2);
+  white-space:nowrap;transition:.18s;
+}
+.nav a:hover{background:var(--brand-soft);color:var(--brand-deep)}
+.header-tools{display:flex;align-items:center;gap:10px;flex:none}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:170px;padding:7px 10px 7px 30px;border:1px solid var(--line);
+  border-radius:999px;background:#faf8f6;font-size:13px;color:var(--ink);
+  transition:.2s;
+}
+.search-box input:focus{width:210px;outline:none;border-color:var(--brand);background:#fff}
+.search-box svg{position:absolute;left:9px;width:15px;height:15px;stroke:var(--muted);fill:none;stroke-width:2}
+.btn-mini{
+  border:1px solid var(--brand);background:var(--brand);color:#fff;
+  font-size:13px;padding:6px 14px;border-radius:999px;cursor:pointer;transition:.18s;
+}
+.btn-mini:hover{background:var(--brand-deep);border-color:var(--brand-deep)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:5px 9px;cursor:pointer;font-size:13px;color:var(--ink-2)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 82% -8%,rgba(194,84,58,.16),transparent 62%),
+    radial-gradient(700px 380px at 8% 108%,rgba(47,107,94,.14),transparent 60%),
+    linear-gradient(180deg,#fbf8f5,#f3eee8);
+  border-bottom:1px solid var(--line);
+}
+.hero-in{
+  max-width:1400px;margin:0 auto;padding:52px 20px 56px;
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.18em;
+  color:var(--brand-deep);text-transform:uppercase;font-weight:600;
+  background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 13px;
+}
+.hero-kicker i{width:6px;height:6px;border-radius:50%;background:var(--brand);display:block}
+.hero h1{
+  font-size:clamp(34px,4.6vw,54px);margin:18px 0 0;letter-spacing:-.02em;
+  font-weight:800;
+}
+.hero h1 span{color:var(--brand)}
+.hero-sub{
+  margin-top:16px;font-size:17px;color:var(--ink-2);max-width:540px;line-height:1.8;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn-primary{
+  display:inline-block;background:var(--ink);color:#fff;padding:11px 24px;border-radius:999px;
+  font-size:15px;font-weight:600;transition:.2s;border:1px solid var(--ink);
+}
+.btn-primary:hover{background:var(--brand);border-color:var(--brand)}
+.btn-ghost{
+  display:inline-block;background:transparent;color:var(--ink);padding:11px 22px;border-radius:999px;
+  font-size:15px;border:1px solid var(--ink-2);transition:.2s;
+}
+.btn-ghost:hover{background:#fff;border-color:var(--brand);color:var(--brand-deep)}
+.hero-stats{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:23px;font-weight:800;letter-spacing:-.02em}
+.hero-stats div span{font-size:12px;color:var(--muted);letter-spacing:.05em}
+
+.hero-visual{position:relative}
+.hero-visual .frame{
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;
+  box-shadow:var(--shadow);
+}
+.hero-visual .frame svg{width:100%;height:auto;display:block;border-radius:12px}
+.hero-tag{
+  position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:8px 13px;font-size:12.5px;box-shadow:var(--shadow);
+  display:flex;align-items:center;gap:7px;
+}
+.hero-tag b{font-weight:700}
+.hero-tag.t1{top:-14px;right:14px;color:var(--brand-deep)}
+.hero-tag.t2{bottom:-16px;left:-10px;color:var(--accent)}
+.hero-tag .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+
+/* ---------- 布局 ---------- */
+.layout{
+  max-width:1400px;margin:0 auto;padding:0 20px;
+  display:grid;grid-template-columns:186px minmax(0,1fr) 250px;gap:30px;
+  align-items:start;
+}
+.layout > *{min-width:0}
+main{min-width:0;padding:36px 0 60px}
+aside{padding-top:36px}
+
+/* 左频道栏 */
+.side-channels{
+  position:sticky;top:calc(var(--notice-h) + var(--header-h) + 20px);
+  padding-top:36px;
+}
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;box-shadow:var(--shadow);
+}
+.panel + .panel{margin-top:18px}
+.panel-title{
+  font-size:12px;letter-spacing:.16em;color:var(--muted);font-weight:700;
+  text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px;
+}
+.panel-title::after{content:"";flex:1;height:1px;background:var(--line)}
+.chan-list li + li{margin-top:2px}
+.chan-list a{
+  display:flex;justify-content:space-between;align-items:center;gap:8px;
+  padding:7px 9px;border-radius:var(--radius-sm);font-size:14px;color:var(--ink-2);
+  transition:.16s;
+}
+.chan-list a:hover{background:var(--brand-soft);color:var(--brand-deep)}
+.chan-list a small{color:var(--muted);font-size:11px}
+
+/* 通用板块 */
+.section{margin-bottom:46px;scroll-margin-top:calc(var(--notice-h) + var(--header-h) + 18px)}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px}
+.section-head h2{font-size:23px;letter-spacing:-.01em}
+.section-head h2 i{font-style:normal;color:var(--brand);margin-right:8px;font-size:15px;vertical-align:2px}
+.section-head p{font-size:13.5px;color:var(--muted);margin-top:4px}
+.section-more{font-size:13px;color:var(--brand-deep);border-bottom:1px solid var(--brand-soft);white-space:nowrap}
+
+/* 概览 */
+.overview{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 28px;box-shadow:var(--shadow);
+}
+.overview p + p{margin-top:14px}
+.overview p{font-size:15.5px;color:var(--ink-2);line-height:1.85}
+.overview strong{color:var(--ink);font-weight:700}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;transition:.22s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#d9cbc0}
+.card-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#eee}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover .card-img img{transform:scale(1.05)}
+.card-badge{
+  position:absolute;top:9px;left:9px;background:rgba(31,27,25,.82);color:#fff;
+  font-size:11px;padding:2px 9px;border-radius:999px;letter-spacing:.05em;
+}
+.card-body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:7px;flex:1}
+.card-body h3{font-size:15.5px;line-height:1.45}
+.card-body .desc{font-size:13px;color:var(--ink-2);line-height:1.7;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{
+  font-size:11px;color:var(--accent);background:var(--accent-soft);
+  padding:1px 8px;border-radius:999px;border:1px solid #d3e6df;white-space:nowrap;
+}
+.tag.warm{color:var(--brand-deep);background:var(--brand-soft);border-color:#eed3c9}
+.card-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:9px}
+.card-meta b{color:var(--brand);font-weight:700}
+
+/* 更新流 */
+.updates{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.update-row{
+  display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:baseline;
+  padding:13px 18px;border-bottom:1px solid var(--line);transition:.16s;
+}
+.update-row:last-child{border-bottom:0}
+.update-row:hover{background:#fbf7f4}
+.update-time{font-size:11.5px;color:var(--muted);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.update-row h4{font-size:14.5px;font-weight:600;display:inline}
+.update-row .sum{font-size:13px;color:var(--ink-2);margin-top:2px}
+.update-tag{font-size:11px;padding:1px 8px;border-radius:999px;background:var(--brand-soft);color:var(--brand-deep);white-space:nowrap}
+.update-tag.g{background:var(--accent-soft);color:var(--accent)}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cat{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:14px 15px;transition:.2s;display:block;
+}
+.cat:hover{border-color:var(--brand);background:#fffdfb;transform:translateY(-2px)}
+.cat b{display:block;font-size:15px;margin-bottom:3px}
+.cat span{font-size:12px;color:var(--muted);line-height:1.6;display:block}
+.cat em{font-style:normal;font-size:11px;color:var(--brand);font-weight:600}
+
+/* 深度解析 */
+.article{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 34px;box-shadow:var(--shadow);
+}
+.article h3{font-size:18.5px;margin:26px 0 10px;padding-left:12px;border-left:3px solid var(--brand);line-height:1.4}
+.article h3:first-child{margin-top:0}
+.article p{font-size:15.5px;color:var(--ink-2);line-height:1.9;margin-bottom:12px}
+.article ul{margin:10px 0 16px;padding-left:2px}
+.article ul li{
+  position:relative;padding-left:18px;font-size:15px;color:var(--ink-2);
+  line-height:1.85;margin-bottom:6px;
+}
+.article ul li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--brand);opacity:.65}
+.article .quote{
+  background:#fbf5f2;border-left:3px solid var(--brand);border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:12px 16px;font-size:14.5px;color:var(--brand-deep);margin:16px 0;
+}
+
+/* 消费路径编号 */
+.path{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.path-item{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 20px;display:flex;gap:14px;box-shadow:var(--shadow);
+}
+.path-num{
+  flex:none;width:34px;height:34px;border-radius:10px;background:var(--brand-soft);color:var(--brand-deep);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;
+}
+.path-item h4{font-size:15px;margin-bottom:5px}
+.path-item p{font-size:13.5px;color:var(--ink-2);line-height:1.75}
+
+/* FAQ */
+.faq{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:last-child{border-bottom:0}
+.faq summary{
+  cursor:pointer;padding:15px 20px;font-size:15px;font-weight:600;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";flex:none;font-size:18px;color:var(--brand);font-weight:400;line-height:1;
+  transition:.2s;
+}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details[open] summary{background:#fdf9f6;color:var(--brand-deep)}
+.faq .ans{padding:0 20px 18px;font-size:14px;color:var(--ink-2);line-height:1.85}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.comment{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;
+}
+.comment .who{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.avatar{
+  width:28px;height:28px;border-radius:50%;flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;
+}
+.comment .who b{font-size:13.5px;font-weight:600}
+.comment .who span{font-size:11px;color:var(--muted);margin-left:auto}
+.comment p{font-size:13.5px;color:var(--ink-2);line-height:1.75}
+
+/* 资讯 */
+.news{display:grid;gap:14px}
+.news-item{
+  display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px;transition:.18s;
+}
+.news-item:hover{border-color:#d9cbc0;box-shadow:var(--shadow)}
+.news-item img{width:100%;height:100%;min-height:96px;object-fit:cover;border-radius:var(--radius-sm)}
+.news-item h4{font-size:15.5px;margin-bottom:6px;line-height:1.5}
+.news-item p{font-size:13px;color:var(--ink-2);line-height:1.7}
+.news-item time{font-size:11.5px;color:var(--muted);display:block;margin-top:7px;font-variant-numeric:tabular-nums}
+
+/* 相关推荐标签索引 */
+.rel-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rel-tags a{
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;
+  padding:7px 15px;font-size:13.5px;color:var(--ink-2);transition:.18s;
+}
+.rel-tags a:hover{background:var(--brand);border-color:var(--brand);color:#fff}
+.rel-tags a em{font-style:normal;color:var(--muted);font-size:11px;margin-left:5px}
+.rel-tags a:hover em{color:rgba(255,255,255,.75)}
+
+/* 榜单 */
+.rank{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.rank-row{display:grid;grid-template-columns:34px 44px minmax(0,1fr) auto;gap:12px;align-items:center;padding:11px 16px;border-bottom:1px solid var(--line)}
+.rank-row:last-child{border-bottom:0}
+.rank-num{font-size:16px;font-weight:800;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums}
+.rank-row:nth-child(1) .rank-num{color:var(--brand)}
+.rank-row:nth-child(2) .rank-num{color:var(--gold)}
+.rank-row:nth-child(3) .rank-num{color:var(--accent)}
+.rank-row img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+.rank-row h4{font-size:14px;font-weight:600}
+.rank-row small{font-size:11.5px;color:var(--muted);display:block;margin-top:1px}
+.rank-score{font-size:13px;font-weight:700;color:var(--brand);font-variant-numeric:tabular-nums}
+
+/* 侧栏（右） */
+.right-note{
+  background:linear-gradient(160deg,#fff,#fbf4ef);border:1px solid var(--line);
+  border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);
+}
+.right-note h3{font-size:15px;margin-bottom:8px}
+.right-note p{font-size:13px;color:var(--ink-2);line-height:1.75}
+.right-note .mini-list{margin-top:12px;display:grid;gap:8px}
+.right-note .mini-list a{font-size:13px;color:var(--accent);border-bottom:1px dashed #cfe2da;padding-bottom:5px;display:flex;justify-content:space-between;gap:8px}
+.right-note .mini-list a span{color:var(--muted);font-size:11px}
+.hot-list{display:grid;gap:2px}
+.hot-list a{display:grid;grid-template-columns:20px minmax(0,1fr);gap:9px;padding:7px 4px;font-size:13.5px;color:var(--ink-2);border-radius:6px;align-items:baseline}
+.hot-list a:hover{background:var(--brand-soft);color:var(--brand-deep)}
+.hot-list a i{font-style:normal;font-size:12px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+.hot-list a:nth-child(-n+3) i{color:var(--brand)}
+
+/* 页尾 */
+.footer{background:#221d1a;color:#cfc5be;margin-top:20px}
+.footer-in{max-width:1400px;margin:0 auto;padding:48px 20px 26px}
+.footer-top{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:34px}
+.footer-brand .logo-text{color:#fff}
+.footer-brand p{font-size:13.5px;line-height:1.85;margin-top:14px;color:#a99e97;max-width:320px}
+.footer-col h4{font-size:13px;color:#fff;letter-spacing:.08em;margin-bottom:12px}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul a{font-size:13.5px;color:#a99e97;transition:.16s}
+.footer-col ul a:hover{color:#fff}
+.footer-bottom{
+  margin-top:38px;padding-top:20px;border-top:1px solid #362f2b;
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+  font-size:12px;color:#8a7f78;
+}
+
+/* 无结果 */
+.no-result{
+  display:none;padding:22px;background:var(--brand-soft);border:1px dashed var(--brand);
+  border-radius:var(--radius);color:var(--brand-deep);font-size:14px;margin-bottom:18px;
+}
+.no-result.show{display:block}
+
+/* 响应式 */
+@media (max-width:1180px){
+  .layout{grid-template-columns:170px minmax(0,1fr);}
+  .layout aside{display:none}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:1024px){
+  .hero-in{grid-template-columns:1fr;gap:36px;padding:38px 20px 44px}
+  .hero-visual{max-width:560px}
+  .hero-tag.t2{left:10px}
+  .nav{display:none}
+  .nav.open{
+    display:flex;position:absolute;left:0;right:0;top:var(--header-h);
+    background:#fff;flex-direction:column;padding:12px 20px 18px;gap:2px;
+    border-bottom:1px solid var(--line);box-shadow:var(--shadow);
+  }
+  .nav.open a{padding:9px 6px;border-radius:6px}
+  .menu-toggle{display:block}
+  .header-in{position:relative;gap:12px}
+  .search-box input{width:130px}
+  .search-box input:focus{width:160px}
+  .layout{grid-template-columns:1fr}
+  .side-channels{position:static;padding-top:0}
+  .side-channels .panel{margin-top:24px}
+  .chan-list{display:flex;flex-wrap:wrap;gap:6px}
+  .chan-list li + li{margin-top:0}
+  .chan-list a{background:#fff;border:1px solid var(--line);padding:6px 12px;font-size:13px}
+  main{padding-top:28px}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .comments{grid-template-columns:1fr}
+  .path{grid-template-columns:1fr}
+  .article{padding:24px 20px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:26px}
+}
+@media (max-width:740px){
+  body{font-size:15px}
+  .notice-in{padding:0 14px;gap:8px}
+  .notice a{display:none}
+  .header-in{padding:0 14px;height:54px;gap:8px}
+  .logo-text{font-size:17px}
+  .logo-text em{display:none}
+  .search-box input{width:104px;font-size:12px;padding-left:26px}
+  .search-box input:focus{width:120px}
+  .btn-mini{padding:5px 10px;font-size:12px}
+  .hero-in{padding:30px 14px 36px;gap:28px}
+  .hero h1{font-size:32px}
+  .hero-sub{font-size:15px}
+  .hero-stats{gap:20px;margin-top:24px}
+  .hero-stats div strong{font-size:19px}
+  .layout{padding:0 14px}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .cat{padding:11px 12px}
+  .cat b{font-size:14px}
+  .update-row{grid-template-columns:1fr;gap:3px;padding:12px 15px;position:relative}
+  .update-time{font-size:11px}
+  .update-tag{justify-self:start;margin-top:4px}
+  .section-head h2{font-size:19px}
+  .overview{padding:20px 18px}
+  .article{padding:20px 16px}
+  .article h3{font-size:16.5px}
+  .news-item{grid-template-columns:96px minmax(0,1fr);gap:12px;padding:11px}
+  .news-item img{min-height:80px}
+  .rank-row{grid-template-columns:26px 38px minmax(0,1fr) auto;gap:9px;padding:10px 12px}
+  .rank-row img{width:38px;height:38px}
+  .footer-in{padding:34px 14px 20px}
+  .footer-top{grid-template-columns:1fr;gap:22px}
+  .faq summary{padding:13px 15px;font-size:14px}
+  .faq .ans{padding:0 15px 15px}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="notice" role="region" aria-label="站内更新公告">
+  <div class="notice-in">
+    <span class="notice-badge">今日更新</span>
+    <div class="notice-marquee">
+      <span>11 月 25 日新增 6 个臀中肌激活动作 ｜ 冬季 8 周翘臀计划第 3 周课程已上线 ｜ 体态评估表新增「骨盆前倾」自测项 ｜ 本周打卡榜前 20 名公布 ｜ 11 月 25 日新增 6 个臀中肌激活动作 ｜ 冬季 8 周翘臀计划第 3 周课程已上线 ｜ 体态评估表新增「骨盆前倾」自测项 ｜ 本周打卡榜前 20 名公布</span>
+    </div>
+    <a href="/#updates">查看全部更新</a>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="header">
+  <div class="header-in">
+    <a class="logo" href="/#top" aria-label="蜜臀mitun 首页">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e07a5f"/>
+            <stop offset="1" stop-color="#a83d26"/>
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#lg1)"/>
+        <path d="M12 27c0-7 3.6-12 8-12s8 5 8 12" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+        <circle cx="20" cy="12.5" r="3.2" fill="#fff"/>
+      </svg>
+      <span class="logo-text">蜜臀mitun<em>SHAPING</em></span>
+    </a>
+    <nav class="nav" id="mainNav" aria-label="主导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选课程</a>
+      <a href="/#updates">更新动态</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#path">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#rank">热门榜单</a>
+    </nav>
+    <div class="header-tools">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg>
+        <input id="siteSearch" type="search" placeholder="搜动作/课程/体态" aria-label="站内搜索动作、课程与体态内容">
+      </div>
+      <button class="btn-mini" id="planBtn" type="button">加入计划</button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="hero-in">
+    <div>
+      <span class="hero-kicker"><i></i>臀部训练 · 体态管理</span>
+      <h1>蜜臀<span>mitun</span></h1>
+      <p class="hero-sub">从臀中肌激活、臀大肌负重到臀腿比例与骨盆体态，把「练臀」拆成可执行的周计划、可对照的动作库和可记录的身体数据。适合健身新手、久坐上班族与产后恢复人群按阶段跟练。</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="/#picks">查看精选课程</a>
+        <a class="btn-ghost" href="/#path">阅读跟练路径</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>186</strong><span>动作库条目</span></div>
+        <div><strong>24</strong><span>周期计划</span></div>
+        <div><strong>11.6万</strong><span>打卡记录</span></div>
+        <div><strong>4.8</strong><span>课程均分</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="frame">
+        <svg viewBox="0 0 520 400" role="img" aria-label="臀部训练周计划与曲线变化示意图">
+          <rect width="520" height="400" rx="14" fill="#fbf6f1"/>
+          <!-- 背景网格 -->
+          <g stroke="#eadfd5" stroke-width="1">
+            <path d="M60 300 H480"/>
+            <path d="M60 240 H480"/>
+            <path d="M60 180 H480"/>
+            <path d="M60 120 H480"/>
+          </g>
+          <!-- 面积曲线 -->
+          <defs>
+            <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#c2543a" stop-opacity=".28"/>
+              <stop offset="1" stop-color="#c2543a" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M60 300 C110 296 140 270 180 246 C220 224 250 214 290 190 C330 166 360 140 400 118 C430 102 460 96 480 92 L480 300 Z" fill="url(#area)"/>
+          <path d="M60 300 C110 296 140 270 180 246 C220 224 250 214 290 190 C330 166 360 140 400 118 C430 102 460 96 480 92" fill="none" stroke="#c2543a" stroke-width="3.2" stroke-linecap="round"/>
+          <g fill="#c2543a">
+            <circle cx="180" cy="246" r="5"/>
+            <circle cx="290" cy="190" r="5"/>
+            <circle cx="400" cy="118" r="5"/>
+            <circle cx="480" cy="92" r="5"/>
+          </g>
+          <!-- 柱状周计划 -->
+          <g fill="#2f6b5e" opacity=".8">
+            <rect x="86" y="322" width="18" height="26" rx="4"/>
+            <rect x="136" y="312" width="18" height="36" rx="4"/>
+            <rect x="186" y="326" width="18" height="22" rx="4"/>
+            <rect x="236" y="304" width="18" height="44" rx="4"/>
+            <rect x="286" y="318" width="18" height="30" rx="4"/>
+            <rect x="336" y="298" width="18" height="50" rx="4"/>
+            <rect x="386" y="316" width="18" height="32" rx="4"/>
+          </g>
+          <g font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="11" fill="#8a7f78">
+            <text x="86" y="366">一</text><text x="136" y="366">二</text><text x="186" y="366">三</text>
+            <text x="236" y="366">四</text><text x="286" y="366">五</text><text x="336" y="366">六</text>
+            <text x="386" y="366">日</text>
+          </g>
+          <g font-family="PingFang SC,Microsoft YaHei,sans-serif">
+            <text x="60" y="86" font-size="12" fill="#8a7f78">臀围 / 训练负荷综合曲线</text>
+            <text x="400" y="82" font-size="13" font-weight="700" fill="#8f3524">8 周 +2.4cm</text>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-tag t1"><span class="dot"></span><b>第 3 周</b> · 臀中肌激活</div>
+      <div class="hero-tag t2"><span class="dot"></span>今日 386 人完成打卡</div>
+    </div>
+  </div>
+</section>
+
+<!-- 主体布局 -->
+<div class="layout">
+
+  <!-- 左频道栏 -->
+  <aside class="side-channels" aria-label="频道索引">
+    <div class="panel">
+      <div class="panel-title">训练频道</div>
+      <ul class="chan-list">
+        <li><a href="/#cats">臀中肌激活 <small>32</small></a></li>
+        <li><a href="/#cats">臀大肌负重 <small>41</small></a></li>
+        <li><a href="/#cats">臀腿比例 <small>28</small></a></li>
+        <li><a href="/#cats">居家无器械 <small>36</small></a></li>
+        <li><a href="/#cats">翘臀周期计划 <small>24</small></a></li>
+        <li><a href="/#cats">骨盆体态 <small>19</small></a></li>
+        <li><a href="/#cats">产后恢复 <small>16</small></a></li>
+        <li><a href="/#cats">饮食配合 <small>22</small></a></li>
+        <li><a href="/#cats">拉伸放松 <small>18</small></a></li>
+        <li><a href="/#cats">体态评估 <small>14</small></a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-title">打卡入口</div>
+      <p style="font-size:13px;color:var(--ink-2);line-height:1.75">今天已完成 <b style="color:var(--brand)">386</b> 人次训练打卡，本周累计 <b style="color:var(--brand)">2,914</b> 人次。</p>
+      <div class="mini-list" style="margin-top:10px;display:grid;gap:8px">
+        <a href="/#updates" style="font-size:13px;color:var(--accent);display:flex;justify-content:space-between;gap:8px">今日打卡榜 <span style="color:var(--muted);font-size:11px">386 人</span></a>
+        <a href="/#rank" style="font-size:13px;color:var(--accent);display:flex;justify-content:space-between;gap:8px">本周榜单 <span style="color:var(--muted);font-size:11px">更新</span></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 主内容 -->
+  <main>
+
+    <div class="no-result" id="noResult" role="status" aria-live="polite">没有找到与该关键词匹配的动作或课程，试试「臀中肌」「居家」「骨盆」等更短的中文词。</div>
+
+    <!-- 1 领域概览 -->
+    <section class="section" id="overview">
+      <div class="section-head">
+        <div>
+          <h2><i>01</i>臀型领域的整体图景</h2>
+          <p>先弄清楚「练臀」到底包含哪几类内容，再决定从哪条线切入。</p>
+        </div>
+      </div>
+      <div class="overview">
+        <p>臀部训练并不是一个单一动作，而是一套由肌肉分工决定的内容体系。<strong>臀大肌</strong>负责髋伸与整体体积，是翘臀形态的主力；<strong>臀中肌</strong>负责髋外展与稳定，决定臀部上缘的饱满度和站立时有没有「凹陷感」；<strong>臀小肌与深层外旋肌群</strong>则影响步态与膝盖朝向。三者训练方式差别很大，用深蹲硬拉解决全部问题，往往会遇到「腿粗了臀没变」的瓶颈。</p>
+        <p>当前蜜臀mitun 上值得关注的内容，大致分四条主线。第一条是<strong>动作库</strong>，覆盖臀桥、髋外展、罗马尼亚硬拉、保加利亚分腿蹲等 186 个条目，每个条目标注目标肌群、常见代偿和替代动作。第二条是<strong>周期计划</strong>，把动作按 4 周、8 周、12 周编排，解决「今天练什么」的问题。第三条是<strong>体态与评估</strong>，包括骨盆前倾自测、假胯宽判断、臀凹陷成因分析。第四条是<strong>配套内容</strong>，即饮食蛋白摄入、拉伸放松与经期训练调整。</p>
+        <p>从人群看，久坐上班族的核心诉求是激活「睡着的臀肌」，训练以低负荷高次数为主；健身新手需要先建立髋铰链模式，再谈负重；产后恢复人群要先做盆底与呼吸评估；而追求围度增长的进阶者，关注的是负重递增与臀腿分离度。这四类人的动作选择、组数安排、恢复节奏完全不同，混用同一套计划是常见误区。</p>
+        <p>判断一个臀部内容是否值得跟练，可以看三点：是否标明目标肌群而非笼统说「练臀」；是否给出代偿提示，比如腰酸、膝内扣怎么调整；是否有可量化的进阶方式，例如从自重臀桥到单腿臀桥再到杠铃臀推。缺其中任意一点，内容大概率只是动作演示，不足以支撑 8 周以上的持续训练。</p>
+      </div>
+    </section>
+
+    <!-- 2 精选课程 -->
+    <section class="section" id="picks">
+      <div class="section-head">
+        <div>
+          <h2><i>02</i>精选训练内容</h2>
+          <p>按目标肌群与训练场景挑选，每门都标注了适用人群与周期长度。</p>
+        </div>
+        <a class="section-more" href="/#cats">全部分类</a>
+      </div>
+      <div class="card-grid">
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/mitun-glute-med08/400/300" width="400" height="300" loading="lazy" alt="弹力带臀中肌侧向激活训练封面">
+            <span class="card-badge">激活</span>
+          </div>
+          <div class="card-body">
+            <h3>弹力带臀中肌激活 12 分钟</h3>
+            <div class="desc">用侧向行走、蚌式开合、单腿外展三个动作唤醒臀部上缘，适合久坐后腰臀发酸、站立时臀部两侧有凹陷感的人作为每日热身。</div>
+            <div class="tags"><span class="tag">臀中肌</span><span class="tag">弹力带</span><span class="tag warm">零器械替代</span></div>
+            <div class="card-meta"><span>评分 <b>4.9</b> · 3.2 万人跟练</span><span>12 分钟</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/mitun-hipthrust21/400/300" width="400" height="300" loading="lazy" alt="杠铃臀推负重进阶课程封面">
+            <span class="card-badge">负重</span>
+          </div>
+          <div class="card-body">
+            <h3>杠铃臀推从 20kg 到 60kg 进阶</h3>
+            <div class="desc">8 周负重递增方案，逐周拆解髋伸幅度、下巴收位与顶峰收缩停顿，解决臀推时腰部代偿、臀不发力的问题。</div>
+            <div class="tags"><span class="tag">臀大肌</span><span class="tag">自由重量</span><span class="tag warm">8 周计划</span></div>
+            <div class="card-meta"><span>评分 <b>4.8</b> · 1.7 万人跟练</span><span>8 周</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/mitun-rdl33/400/300" width="400" height="300" loading="lazy" alt="罗马尼亚硬拉髋铰链教学封面">
+            <span class="card-badge">基础</span>
+          </div>
+          <div class="card-body">
+            <h3>罗马尼亚硬拉髋铰链精讲</h3>
+            <div class="desc">从墙面触碰练习到哑铃 RDL，把「屈髋」而非「弯腰」的感觉练出来，是臀部与腘绳肌协同发力的入门必修。</div>
+            <div class="tags"><span class="tag">髋铰链</span><span class="tag">腘绳肌</span><span class="tag">新手友好</span></div>
+            <div class="card-meta"><span>评分 <b>4.7</b> · 5.4 万人跟练</span><span>18 分钟</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/mitun-home45/400/300" width="400" height="300" loading="lazy" alt="居家无器械翘臀跟练课程封面">
+            <span class="card-badge">居家</span>
+          </div>
+          <div class="card-body">
+            <h3>居家无器械翘臀 20 分钟</h3>
+            <div class="desc">只用一张瑜伽垫完成单腿臀桥、四足后踢、侧卧抬腿与保加利亚分腿蹲，适合出差、宿舍或没有健身房条件的人。</div>
+            <div class="tags"><span class="tag">无器械</span><span class="tag">居家</span><span class="tag warm">每日可练</span></div>
+            <div class="card-meta"><span>评分 <b>4.6</b> · 6.8 万人跟练</span><span>20 分钟</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/mitun-postpartum57/400/300" width="400" height="300" loading="lazy" alt="产后盆底与臀部恢复课程封面">
+            <span class="card-badge">恢复</span>
+          </div>
+          <div class="card-body">
+            <h3>产后盆底与臀部重建 6 周</h3>
+            <div class="desc">先做呼吸与腹压评估，再进入低强度臀桥与侧卧外展，全程避免跳跃与高腹压动作，产后 6 周以上经医生确认后可跟。</div>
+            <div class="tags"><span class="tag">产后恢复</span><span class="tag">盆底肌</span><span class="tag">低强度</span></div>
+            <div class="card-meta"><span>评分 <b>4.9</b> · 8,400 人跟练</span><span>6 周</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/mitun-posture62/400/300" width="400" height="300" loading="lazy" alt="骨盆前倾与假胯宽体态评估封面">
+            <span class="card-badge">体态</span>
+          </div>
+          <div class="card-body">
+            <h3>骨盆前倾与假胯宽自测</h3>
+            <div class="desc">用靠墙站姿、臀桥感受度和腿型照片完成三维自测，区分「真胯宽」与股骨内旋造成的视觉假胯宽，再决定练什么。</div>
+            <div class="tags"><span class="tag">体态评估</span><span class="tag">假胯宽</span><span class="tag warm">自测工具</span></div>
+            <div class="card-meta"><span>评分 <b>4.8</b> · 2.9 万人测过</span><span>15 分钟</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/mitun-split78/400/300" width="400" height="300" loading="lazy" alt="保加利亚分腿蹲臀腿分离训练封面">
+            <span class="card-badge">进阶</span>
+          </div>
+          <div class="card-body">
+            <h3>保加利亚分腿蹲臀腿分离</h3>
+            <div class="desc">通过躯干前倾角度与后脚抬高高度调整发力比例，让臀部承担更多负荷，同时改善左右腿力量差异。</div>
+            <div class="tags"><span class="tag">单腿训练</span><span class="tag">臀腿分离</span><span class="tag">进阶</span></div>
+            <div class="card-meta"><span>评分 <b>4.7</b> · 1.2 万人跟练</span><span>22 分钟</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/mitun-stretch91/400/300" width="400" height="300" loading="lazy" alt="髋屈肌与梨状肌拉伸放松封面">
+            <span class="card-badge">放松</span>
+          </div>
+          <div class="card-body">
+            <h3>髋屈肌与梨状肌拉伸 10 分钟</h3>
+            <div class="desc">针对久坐导致的髋前侧紧张与臀部深层酸胀，训练后或睡前跟练，缓解因髋关节活动度不足造成的深蹲下沉困难。</div>
+            <div class="tags"><span class="tag">拉伸</span><span class="tag">髋活动度</span><span class="tag warm">睡前可做</span></div>
+            <div class="card-meta"><span>评分 <b>4.6</b> · 4.1 万人跟练</span><span>10 分钟</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3 更新动态 -->
+    <section class="section" id="updates">
+      <div class="section-head">
+        <div>
+          <h2><i>03</i>最新更新与打卡动态</h2>
+          <p>课程上线、动作修订与社区打卡进度，按时间倒序。</p>
+        </div>
+      </div>
+      <div class="updates">
+        <div class="update-row">
+          <span class="update-time">今天 09:30</span>
+          <div><h4>弹力带臀中肌激活 12 分钟</h4><p class="sum">新增第 4 组「跪姿侧向抬腿」变式，替换原有站姿动作，降低腰方肌代偿。</p></div>
+          <span class="update-tag">动作修订</span>
+        </div>
+        <div class="update-row">
+          <span class="update-time">今天 08:10</span>
+          <div><h4>冬季 8 周翘臀计划</h4><p class="sum">第 3 周课程上线，本周主题为臀中肌激活 + 单腿稳定，含 4 次训练与 1 次评估。</p></div>
+          <span class="update-tag g">计划更新</span>
+        </div>
+        <div class="update-row">
+          <span class="update-time">昨天 21:10</span>
+          <div><h4>体态评估表</h4><p class="sum">新增「骨盆前倾」自测项，包含靠墙腰隙测量与托马斯测试简化版说明。</p></div>
+          <span class="update-tag g">工具更新</span>
+        </div>
+        <div class="update-row">
+          <span class="update-time">昨天 18:40</span>
+          <div><h4>杠铃臀推进阶课</h4><p class="sum">第 6 周负重表调整，60kg 组数由 4 组改为 5 组，并补充腰围保护提示。</p></div>
+          <span class="update-tag">内容调整</span>
+        </div>
+        <div class="update-row">
+          <span class="update-time">11 月 23 日</span>
+          <div><h4>假胯宽专题</h4><p class="sum">新增股骨内旋与阔筋膜张肌紧张的对比图解，附 3 个放松动作。</p></div>
+          <span class="update-tag">专题上线</span>
+        </div>
+        <div class="update-row">
+          <span class="update-time">11 月 22 日</span>
+          <div><h4>居家无器械翘臀 20 分钟</h4><p class="sum">补充「床上可做」的低冲击版本，适合经期第 2—4 天跟练。</p></div>
+          <span class="update-tag g">版本新增</span>
+        </div>
+        <div class="update-row">
+          <span class="update-time">11 月 20 日</span>
+          <div><h4>产后盆底重建 6 周</h4><p class="sum">新增呼吸评估视频，明确腹直肌分离超过两指时的暂停标准。</p></div>
+          <span class="update-tag">内容调整</span>
+        </div>
+        <div class="update-row">
+          <span class="update-time">11 月 18 日</span>
+          <div><h4>饮食配合专题</h4><p class="sum">更新蛋白摄入参考表，按体重 1.4—1.8g/kg 分档，附常见食物对照。</p></div>
+          <span class="update-tag g">资料更新</span>
+        </div>
+        <div class="update-row">
+          <span class="update-time">11 月 16 日</span>
+          <div><h4>保加利亚分腿蹲</h4><p class="sum">动作要点页新增「后脚高度对照」表，12cm、20cm、30cm 分别对应不同发力比例。</p></div>
+          <span class="update-tag">动作修订</span>
+        </div>
+        <div class="update-row">
+          <span class="update-time">11 月 14 日</span>
+          <div><h4>本周打卡榜</h4><p class="sum">前 20 名公布，最高连续打卡 27 天，平均单次训练 24 分钟。</p></div>
+          <span class="update-tag g">社区动态</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="section" id="cats">
+      <div class="section-head">
+        <div>
+          <h2><i>04</i>按需求进入分类</h2>
+          <p>每个分类对应一种明确的训练目标或身体问题。</p>
+        </div>
+      </div>
+      <div class="cat-grid">
+        <a class="cat" href="/#picks"><b>臀中肌激活</b><span>侧向行走、蚌式开合、单腿外展</span><em>32 个动作</em></a>
+        <a class="cat" href="/#picks"><b>臀大肌负重</b><span>臀推、硬拉、深蹲变式</span><em>41 个动作</em></a>
+        <a class="cat" href="/#picks"><b>臀腿比例</b><span>分离度训练与腿围控制</span><em>28 个动作</em></a>
+        <a class="cat" href="/#picks"><b>居家无器械</b><span>瑜伽垫可完成的跟练</span><em>36 个动作</em></a>
+        <a class="cat" href="/#picks"><b>翘臀周期计划</b><span>4 周 / 8 周 / 12 周编排</span><em>24 套计划</em></a>
+        <a class="cat" href="/#deep"><b>骨盆体态</b><span>前倾、后倾与旋转调整</span><em>19 篇解析</em></a>
+        <a class="cat" href="/#deep"><b>产后恢复</b><span>盆底、腹压与低强度重建</span><em>16 篇解析</em></a>
+        <a class="cat" href="/#path"><b>饮食配合</b><span>蛋白摄入与热量区间参考</span><em>22 篇资料</em></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="section" id="deep">
+      <div class="section-head">
+        <div>
+          <h2><i>05</i>深度解析：为什么练了深蹲臀部还是没变化</h2>
+          <p>从肌肉分工、动作选择到负重节奏，拆开常见的四个卡点。</p>
+        </div>
+      </div>
+      <div class="article">
+        <h3>卡点一：臀肌「不会发力」，而不是「练得不够」</h3>
+        <p>久坐人群最常见的问题不是力量不足，而是神经募集顺序被改变。髋屈肌长期缩短、臀大肌长期被拉长抑制，做深蹲时身体会优先调用股四头肌和竖脊肌完成动作，臀部只做被动跟随。表现是：蹲完大腿前侧酸、腰酸，臀部几乎没有感觉。</p>
+        <p>解决顺序应该是先激活再负重。激活不需要很累，目标是「找到感觉」：</p>
+        <ul>
+          <li>蚌式开合 2 组 × 15 次，侧卧屈膝，脚跟并拢，只用臀中肌把膝盖打开。</li>
+          <li>自重单腿臀桥 2 组 × 12 次，顶峰停 2 秒，感受臀部上缘收缩而非腰部顶起。</li>
+          <li>弹力带侧向行走 2 组 × 12 步，膝盖始终保持外推，避免膝盖内扣。</li>
+        </ul>
+        <p>激活做完再进入主训练，臀部参与度会明显提高。这一步在蜜臀mitun 的动作库里被单独归为「激活」分类，与「负重」分类区分开，原因就在这里。</p>
+
+        <h3>卡点二：动作选错，目标肌群对不上</h3>
+        <p>臀部三块肌肉的训练逻辑差异很大，用错动作等于白练。下面这张对照可以直接判断自己的计划是否失衡：</p>
+        <ul>
+          <li><strong>臀大肌</strong>：需要髋伸且有阻力，臀推、罗马尼亚硬拉、后撤步蹲效率最高，深蹲对臀大肌的刺激其实低于普遍认知。</li>
+          <li><strong>臀中肌</strong>：需要髋外展与单腿稳定，侧向行走、蚌式开合、单腿硬拉是主力，负重深蹲几乎练不到。</li>
+          <li><strong>臀小肌与深层外旋肌</strong>：需要外旋控制，四足位髋外旋、侧卧外旋抬腿更直接。</li>
+        </ul>
+        <p>如果只做深蹲和弓步蹲，臀中肌长期缺位，臀部上缘就会显得扁、两侧出现凹陷，视觉上「臀不圆」。这不是围度问题，而是肌肉分布问题。</p>
+
+        <div class="quote">判断一个训练计划是否合理，看它一周内是否同时包含髋伸类（臀推、硬拉）、髋外展类（侧向行走、蚌式）和单腿稳定类动作。三类齐全，臀型改善才会均匀。</div>
+
+        <h3>卡点三：负重递增太慢，或递增方式不对</h3>
+        <p>臀大肌是人体最大的肌肉之一，对负荷的耐受度高于手臂和小腿。很多人练了半年仍用同一根弹力带，刺激早已不足。合理的递增节奏是每 1—2 周小幅提升，方式可以是加重量、加次数、加停顿时间或缩短组间休息，不必每次都加片。</p>
+        <p>以杠铃臀推为例，一个可参考的 8 周路径是：第 1—2 周用 20—30kg 建立动作模式，每组 12 次；第 3—4 周升至 35—40kg，每组 10 次；第 5—6 周 45—50kg，每组 8 次；第 7—8 周 55—60kg，每组 6—8 次，并在顶峰增加 2 秒停顿。全程保持下巴微收、肋骨下沉，避免用腰椎过伸换取高度。</p>
+        <p>自重训练者无法加重时，改用单腿变式是最有效的替代：单腿臀桥、保加利亚分腿蹲、单腿罗马尼亚硬拉，负荷会成倍增加，同时对稳定性要求更高。</p>
+
+        <h3>卡点四：恢复与饮食没跟上</h3>
+        <p>肌肉在训练中被破坏，在恢复中增长。每周同一肌群高强度训练 2—3 次已经足够，天天练臀反而会抑制恢复。睡眠不足 6 小时、蛋白摄入低于每公斤体重 1.2g 时，训练量再大也很难看到形态变化。</p>
+        <p>一个务实的参考区间是：蛋白每公斤体重 1.4—1.8g，热量略高于维持水平 100—200 千卡，碳水不必刻意压低，因为臀部训练多为中高强度力量训练，需要糖原支撑。若目标是同时减脂，热量缺口控制在 300 千卡以内，避免肌肉流失抵消训练成果。</p>
+        <p>此外，髋关节活动度不足会限制臀推和深蹲的幅度。训练后花 10 分钟做髋屈肌拉伸与梨状肌放松，往往比多加一组动作更能提升下一次训练质量。</p>
+      </div>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="section" id="path">
+      <div class="section-head">
+        <div>
+          <h2><i>06</i>跟练顺序与内容挑选指南</h2>
+          <p>先看什么、怎么判断值不值得投入时间、同类内容怎么比较。</p>
+        </div>
+      </div>
+      <div class="path">
+        <div class="path-item">
+          <div class="path-num">1</div>
+          <div>
+            <h4>先做一次体态自测，再选课程</h4>
+            <p>如果站立时臀部两侧凹陷明显、久坐后腰酸，优先从臀中肌激活类内容切入；如果深蹲时膝盖内扣、脚跟离地，先补髋活动度与踝背屈，而不是直接上负重。</p>
+          </div>
+        </div>
+        <div class="path-item">
+          <div class="path-num">2</div>
+          <div>
+            <h4>新手从 4 周计划开始，不要直接跳 12 周</h4>
+            <p>4 周计划的目的是建立动作模式和训练习惯，每周 3 次、每次 30 分钟内。完成后再进入 8 周负重周期，成功率明显高于一上来就排满六天的人。</p>
+          </div>
+        </div>
+        <div class="path-item">
+          <div class="path-num">3</div>
+          <div>
+            <h4>看课程是否标注目标肌群与代偿提示</h4>
+            <p>只写「翘臀」不写练哪块肌肉的内容，很难判断是否适合自己。优质内容会明确说「腰酸说明髋伸不足」「膝盖内扣先降重量」，这类提示比动作数量更有价值。</p>
+          </div>
+        </div>
+        <div class="path-item">
+          <div class="path-num">4</div>
+          <div>
+            <h4>同类课程比较三个维度</h4>
+            <p>一看周期长度是否与自己的可用时间匹配；二看是否有进阶路径，而不是单一难度；三看是否包含评估节点，比如每 2 周测一次臀围或拍照对比，否则很难判断是否有效。</p>
+          </div>
+        </div>
+        <div class="path-item">
+          <div class="path-num">5</div>
+          <div>
+            <h4>把拉伸与饮食当作计划的一部分</h4>
+            <p>训练 20 分钟、拉伸 10 分钟、蛋白补足，这三件事的组合效果远好于单次练 50 分钟却忽略恢复。建议把放松内容固定在训练日末尾，形成闭环。</p>
+          </div>
+        </div>
+        <div class="path-item">
+          <div class="path-num">6</div>
+          <div>
+            <h4>遇到瓶颈先减量，而不是加练</h4>
+            <p>连续 3 周围度无变化、训练时臀部无感，通常是疲劳累积或动作模式退化。安排一周减量训练（组数减半、重量降 20%），再重新评估，比硬加两组更有效。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="section" id="faq">
+      <div class="section-head">
+        <div>
+          <h2><i>07</i>常见问题</h2>
+          <p>围绕动作选择、周期安排与效果判断的高频疑问。</p>
+        </div>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>蜜臀训练一般多久能看到变化？</summary>
+          <div class="ans">以每周 2—3 次、持续 8 周为一个观察周期比较合理。前 2—4 周的变化主要是发力感和体态改善，比如站立时臀部更紧、腰酸减少；围度变化通常在第 6—8 周才可测量到，建议每 2 周在固定时间、固定光线下拍侧面照对比，比单看体重更可靠。</div>
+        </details>
+        <details>
+          <summary>臀中肌激活和臀大肌负重有什么区别，需要都练吗？</summary>
+          <div class="ans">两者目标不同。臀中肌激活解决臀部上缘饱满度与单腿稳定，动作以侧向行走、蚌式开合为主，负荷低、次数高；臀大肌负重解决整体体积，动作以臀推、罗马尼亚硬拉为主，负荷高、次数低。需要都练，但顺序上建议先激活再负重，每周安排 1—2 次激活、2 次负重即可。</div>
+        </details>
+        <details>
+          <summary>第一次接触臀部训练，从哪个内容开始比较好？</summary>
+          <div class="ans">建议顺序是：先做骨盆前倾与假胯宽自测，确认没有明显体态问题；再跟「罗马尼亚硬拉髋铰链精讲」建立屈髋模式；然后进入 4 周入门计划，每周 3 次，每次包含 1 个髋伸动作、1 个髋外展动作和 1 个单腿动作。不建议一上来就做杠铃臀推或大重量深蹲。</div>
+        </details>
+        <details>
+          <summary>练臀会不会把腿练粗？</summary>
+          <div class="ans">取决于动作选择和负重方式。以髋伸为主、膝盖屈曲幅度小的动作（臀推、罗马尼亚硬拉、后踢）对股四头肌刺激较小，更偏向臀部；深蹲、腿举等膝主导动作对大腿前侧刺激更大。如果担心腿围增加，可以减少膝主导动作比例，增加臀桥与单腿硬拉，同时控制总热量。</div>
+        </details>
+        <details>
+          <summary>居家无器械训练能练出翘臀吗？</summary>
+          <div class="ans">能改善形态和紧致度，但围度增长有限。无器械条件下可以通过单腿变式提高负荷，例如单腿臀桥、保加利亚分腿蹲、单腿罗马尼亚硬拉，配合顶峰停顿和慢速离心，刺激强度会明显高于双腿版本。若目标是明显增围，后期仍需引入外部阻力，如弹力带、壶铃或杠铃。</div>
+        </details>
+        <details>
+          <summary>臀部训练后腰酸，是动作错了吗？</summary>
+          <div class="ans">多数情况是髋伸不足导致的腰椎代偿。做臀推时如果顶端靠腰椎过伸把身体顶高，腰部就会酸。调整方法是：下巴微收、肋骨下沉、顶端只到躯干与大腿成一直线，并用臀部主动夹紧而非腰部发力。若腰酸持续超过 3 天或伴随放射痛，应暂停训练并咨询专业人士。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="section" id="comments">
+      <div class="section-head">
+        <div>
+          <h2><i>08</i>社区跟练反馈</h2>
+          <p>来自打卡用户的真实记录，包含效果、疑问与中性评价。</p>
+        </div>
+      </div>
+      <div class="comments">
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#c2543a">林</span><b>林小满</b><span>今天 08:42</span></div>
+          <p>跟了弹力带臀中肌激活两周，最明显的变化是久坐后站起来腰不酸了。侧向行走那组一开始完全找不到发力，第三天才有点感觉。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#2f6b5e">陈</span><b>陈默不吃辣</b><span>今天 07:15</span></div>
+          <p>杠铃臀推从 20kg 到 45kg 用了六周，顶峰停顿两秒这个细节太关键了，之前一直靠腰顶，现在臀部酸得很明确。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#b8862f">周</span><b>周周要早睡</b><span>昨天 22:30</span></div>
+          <p>居家 20 分钟那套适合我这种下班没力气去健身房的人，单腿臀桥做三组第二天就有感觉，就是垫子有点滑。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#8f3524">苏</span><b>苏打水气泡</b><span>昨天 20:06</span></div>
+          <p>假胯宽自测做完了，原来是股骨内旋不是真胯宽。按专题里的放松动作练了一周，视觉上好一点点，但我觉得需要更长时间。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#4a423d">何</span><b>何老师的猫</b><span>昨天 18:52</span></div>
+          <p>罗马尼亚硬拉精讲讲得很细，墙面触碰练习解决了我一直弯腰的问题。不过哑铃重量建议可以再分细一点，20kg 对新手偏重。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#2f6b5e">郑</span><b>郑一鸣</b><span>11 月 24 日</span></div>
+          <p>产后恢复那套节奏很稳，呼吸评估部分让我意识到之前腹压用错了。建议明确写清楚剖宫产和顺产的时间差异。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#c2543a">吴</span><b>吴桐树</b><span>11 月 24 日</span></div>
+          <p>保加利亚分腿蹲的后脚高度对照表实用，我用 20cm 练了两周，左右腿差距小了一些，之前右腿明显不稳。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#b8862f">许</span><b>许愿瘦十斤</b><span>11 月 23 日</span></div>
+          <p>说实话练了一个月围度没怎么变，但臀部手感紧实了，穿牛仔裤线条好看很多。可能我蛋白吃得不够，准备调整饮食。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#8f3524">高</span><b>高个子阿哲</b><span>11 月 23 日</span></div>
+          <p>髋屈肌拉伸那套我每天睡前做，深蹲能蹲得更低了。之前一直以为是力量不够，其实是活动度卡住。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#4a423d">梁</span><b>梁小舟</b><span>11 月 22 日</span></div>
+          <p>8 周计划排得挺合理，但我一周只能练两次，按这个进度可能要拉长到 12 周。希望出个每周两练的版本。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#2f6b5e">沈</span><b>沈知微</b><span>11 月 22 日</span></div>
+          <p>蚌式开合做完臀侧酸胀感很明显，第一次知道臀中肌在哪。就是动作计数有点快，我习惯自己数。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#c2543a">罗</span><b>罗小野</b><span>11 月 21 日</span></div>
+          <p>臀推时腰酸的提示太有用了，按说的收下巴、肋骨下沉，第二组就明显好转。这种代偿提示比动作演示更值。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#b8862f">叶</span><b>叶青禾</b><span>11 月 20 日</span></div>
+          <p>整体内容不错，就是希望动作库里能加一个「按器械筛选」，出差只有弹力带的时候找动作有点费劲。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#8f3524">潘</span><b>潘达不胖</b><span>11 月 20 日</span></div>
+          <p>饮食蛋白对照表我打印出来了，按 1.6g/kg 吃了一个月，训练后恢复速度确实快一些，不那么容易连着酸三天。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#4a423d">唐</span><b>唐棠糖</b><span>11 月 19 日</span></div>
+          <p>体态自测说我骨盆前倾，但我去医院看说没问题，可能自测标准比较宽松。建议加一句「仅供参考」的说明。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar" style="background:#2f6b5e">韩</span><b>韩梅梅</b><span>11 月 18 日</span></div>
+          <p>连续打卡 27 天，臀围加了 1.5cm，虽然不多但能测出来。最大的收获是知道怎么安排训练顺序了。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="section" id="news">
+      <div class="section-head">
+        <div>
+          <h2><i>09</i>相关资讯</h2>
+          <p>训练内容上线、动作标准调整与社区讨论焦点。</p>
+        </div>
+      </div>
+      <div class="news">
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/mitun-news-glute01/600/400" width="600" height="400" loading="lazy" alt="臀中肌激活课程上线配图">
+          <div>
+            <h4>臀中肌激活课程新增 6 个弹力带变式</h4>
+            <p>覆盖站姿、跪姿、侧卧三种体位，补充了原有课程缺少的旋转控制动作，适合已有两周基础的人进阶。</p>
+            <time datetime="2026-11-25">2026-11-25</time>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/mitun-news-plan02/600/400" width="600" height="400" loading="lazy" alt="冬季八周翘臀计划第三周配图">
+          <div>
+            <h4>冬季 8 周翘臀计划进入第 3 周</h4>
+            <p>本周主题为臀中肌激活与单腿稳定，训练量较第 2 周提升约 15%，新增一次体态评估节点。</p>
+            <time datetime="2026-11-24">2026-11-24</time>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/mitun-news-posture03/600/400" width="600" height="400" loading="lazy" alt="骨盆前倾自测项上线配图">
+          <div>
+            <h4>体态评估表加入骨盆前倾自测项</h4>
+            <p>包含靠墙腰隙测量与托马斯测试简化版，同时给出轻度前倾的 3 个纠正动作，避免用户自行过度解读。</p>
+            <time datetime="2026-11-23">2026-11-23</time>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/mitun-news-hip04/600/400" width="600" height="400" loading="lazy" alt="假胯宽专题对比图配图">
+          <div>
+            <h4>假胯宽专题补充股骨内旋对比图解</h4>
+            <p>新增阔筋膜张肌紧张与臀中肌无力的区分方法，社区讨论中「越练腿越粗」的疑问有了更明确的排查路径。</p>
+            <time datetime="2026-11-22">2026-11-22</time>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/mitun-news-protein05/600/400" width="600" height="400" loading="lazy" alt="蛋白摄入参考表更新配图">
+          <div>
+            <h4>蛋白摄入参考表按体重分档更新</h4>
+            <p>由原来的统一 1.5g/kg 改为 1.4—1.8g/kg 区间，并附鸡胸、鸡蛋、豆腐等常见食物的等量对照。</p>
+            <time datetime="2026-11-20">2026-11-20</time>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/mitun-news-checkin06/600/400" width="600" height="400" loading="lazy" alt="每周打卡榜公布配图">
+          <div>
+            <h4>本周打卡榜公布，连续打卡最高 27 天</h4>
+            <p>前 20 名平均单次训练 24 分钟，其中 14 人选择居家无器械版本，反映冬季室内训练需求上升。</p>
+            <time datetime="2026-11-18">2026-11-18</time>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="section" id="related">
+      <div class="section-head">
+        <div>
+          <h2><i>10</i>延伸方向推荐</h2>
+          <p>从具体条目继续往下走的方向词，与当下热门课程角度不同。</p>
+        </div>
+      </div>
+      <div class="rel-tags">
+        <a href="/#deep">骨盆前倾纠正 <em>体态</em></a>
+        <a href="/#picks">单腿罗马尼亚硬拉 <em>动作</em></a>
+        <a href="/#deep">假胯宽与股骨内旋 <em>解析</em></a>
+        <a href="/#picks">四足位髋外旋 <em>臀小肌</em></a>
+        <a href="/#path">蛋白摄入区间计算 <em>饮食</em></a>
+        <a href="/#picks">经期训练调整 <em>周期</em></a>
+        <a href="/#deep">腹直肌分离筛查 <em>产后</em></a>
+        <a href="/#faq">臀推腰酸代偿 <em>答疑</em></a>
+      </div>
+    </section>
+
+    <!-- 11 热门榜单 -->
+    <section class="section" id="rank">
+      <div class="section-head">
+        <div>
+          <h2><i>11</i>本周热门内容榜</h2>
+          <p>综合跟练人数、收藏与完成率，更新于 2026-11-25。</p>
+        </div>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <span class="rank-num">1</span>
+          <img src="https://picsum.photos/seed/mitun-rank-home01/100/100" width="44" height="44" loading="lazy" alt="居家无器械翘臀课程缩略图">
+          <div><h4>居家无器械翘臀 20 分钟</h4><small>无器械 · 6.8 万人跟练</small></div>
+          <span class="rank-score">9.6</span>
+        </div>
+        <div class="rank-row">
+          <span class="rank-num">2</span>
+          <img src="https://picsum.photos/seed/mitun-rank-rdl02/100/100" width="44" height="44" loading="lazy" alt="罗马尼亚硬拉精讲缩略图">
+          <div><h4>罗马尼亚硬拉髋铰链精讲</h4><small>基础模式 · 5.4 万人跟练</small></div>
+          <span class="rank-score">9.4</span>
+        </div>
+        <div class="rank-row">
+          <span class="rank-num">3</span>
+          <img src="https://picsum.photos/seed/mitun-rank-band03/100/100" width="44" height="44" loading="lazy" alt="弹力带臀中肌激活缩略图">
+          <div><h4>弹力带臀中肌激活 12 分钟</h4><small>激活 · 3.2 万人跟练</small></div>
+          <span class="rank-score">9.3</span>
+        </div>
+        <div class="rank-row">
+          <span class="rank-num">4</span>
+          <img src="https://picsum.photos/seed/mitun-rank-hipthrust04/100/100" width="44" height="44" loading="lazy" alt="杠铃臀推进阶缩略图">
+          <div><h4>杠铃臀推从 20kg 到 60kg</h4><small>负重 · 1.7 万人跟练</small></div>
+          <span class="rank-score">9.1</span>
+        </div>
+        <div class="rank-row">
+          <span class="rank-num">5</span>
+          <img src="https://picsum.photos/seed/mitun-rank-split05/100/100" width="44" height="44" loading="lazy" alt="保加利亚分腿蹲缩略图">
+          <div><h4>保加利亚分腿蹲臀腿分离</h4><small>进阶 · 1.2 万人跟练</small></div>
+          <span class="rank-score">8.9</span>
+        </div>
+        <div class="rank-row">
+          <span class="rank-num">6</span>
+          <img src="https://picsum.photos/seed/mitun-rank-stretch06/100/100" width="44" height="44" loading="lazy" alt="髋屈肌拉伸缩略图">
+          <div><h4>髋屈肌与梨状肌拉伸 10 分钟</h4><small>放松 · 4.1 万人跟练</small></div>
+          <span class="rank-score">8.7</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右辅助栏 -->
+  <aside aria-label="辅助信息">
+    <div class="right-note">
+      <h3>今日训练提示</h3>
+      <p>11 月 25 日建议：臀中肌激活 + 单腿臀桥各 2 组，训练后做 10 分钟髋屈肌拉伸。天冷热身时间延长至 8 分钟。</p>
+      <div class="mini-list">
+        <a href="/#updates">查看第 3 周课程 <span>已上线</span></a>
+        <a href="/#faq">训练后腰酸怎么调整 <span>答疑</span></a>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">站内热榜</div>
+      <div class="hot-list">
+        <a href="/#picks"><i>01</i>居家无器械翘臀 20 分钟</a>
+        <a href="/#picks"><i>02</i>罗马尼亚硬拉精讲</a>
+        <a href="/#picks"><i>03</i>弹力带臀中肌激活</a>
+        <a href="/#picks"><i>04</i>杠铃臀推进阶</a>
+        <a href="/#deep"><i>05</i>假胯宽与股骨内旋</a>
+        <a href="/#deep"><i>06</i>骨盆前倾自测方法</a>
+        <a href="/#picks"><i>07</i>保加利亚分腿蹲</a>
+        <a href="/#path"><i>08</i>蛋白摄入参考表</a>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">体态自查</div>
+      <ul class="chan-list">
+        <li><a href="/#deep">靠墙腰隙测量 <small>前倾</small></a></li>
+        <li><a href="/#deep">托马斯测试简化 <small>髋屈</small></a></li>
+        <li><a href="/#deep">单腿下蹲观察 <small>稳定</small></a></li>
+        <li><a href="/#deep">臀桥感受度判断 <small>募集</small></a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<!-- 页尾 -->
+<footer class="footer">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="/#top" aria-label="蜜臀mitun 首页">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="1" y="1" width="38" height="38" rx="11" fill="#c2543a"/>
+            <path d="M12 27c0-7 3.6-12 8-12s8 5 8 12" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+            <circle cx="20" cy="12.5" r="3.2" fill="#fff"/>
+          </svg>
+          <span class="logo-text">蜜臀mitun</span>
+        </a>
+        <p>臀部训练与体态管理内容站，提供动作库、周期计划、体态自测与饮食配合资料，帮助不同基础的人找到可执行的练臀路径。</p>
+      </div>
+      <div class="footer-col">
+        <h4>训练内容</h4>
+        <ul>
+          <li><a href="/#picks">臀中肌激活</a></li>
+          <li><a href="/#picks">臀大肌负重</a></li>
+          <li><a href="/#picks">居家无器械</a></li>
+          <li><a href="/#picks">翘臀周期计划</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>体态与恢复</h4>
+        <ul>
+          <li><a href="/#deep">骨盆体态解析</a></li>
+          <li><a href="/#deep">假胯宽专题</a></li>
+          <li><a href="/#picks">产后恢复课程</a></li>
+          <li><a href="/#picks">拉伸放松</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>社区与帮助</h4>
+        <ul>
+          <li><a href="/#comments">跟练反馈</a></li>
+          <li><a href="/#rank">热门榜单</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 蜜臀mitun 内容站 · 训练数据与榜单为社区统计示例</span>
+      <span>训练前请评估自身身体状况，如有伤病请遵医嘱</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // 移动端菜单
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('mainNav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? '收起' : '菜单';
+    });
+    nav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && window.innerWidth <= 1024) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.textContent = '菜单';
+      }
+    });
+  }
+
+  // 本地可见内容查找
+  var input = document.getElementById('siteSearch');
+  var noResult = document.getElementById('noResult');
+  var searchable = Array.prototype.slice.call(
+    document.querySelectorAll('main .card, main .update-row, main .cat, main .news-item, main .rank-row, main .comment, main .faq details')
+  );
+  var timer = null;
+  function clearMarks(el){
+    var marks = el.querySelectorAll('mark[data-search]');
+    for (var i = 0; i < marks.length; i++){
+      var m = marks[i];
+      m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
+    }
+    el.normalize();
+  }
+  function doSearch(){
+    var q = (input.value || '').trim().toLowerCase();
+    var hits = 0;
+    searchable.forEach(function(el){
+      clearMarks(el);
+      if (!q){
+        el.style.display = '';
+        return;
+      }
+      var text = el.textContent.toLowerCase();
+      if (text.indexOf(q) !== -1){
+        el.style.display = '';
+        hits++;
+      } else {
+        el.style.display = 'none';
+      }
+    });
+    if (noResult) noResult.classList.toggle('show', q !== '' && hits === 0);
+    // 隐藏搜索后无可见内容的板块
+    Array.prototype.forEach.call(document.querySelectorAll('main .section'), function(sec){
+      if (!q) { sec.style.display = ''; return; }
+      var items = sec.querySelectorAll('.card, .update-row, .cat, .news-item, .rank-row, .comment, .faq details');
+      if (items.length === 0) { sec.style.display = ''; return; }
+      var any = false;
+      for (var i = 0; i < items.length; i++){
+        if (items[i].style.display !== 'none'){ any = true; break; }
+      }
+      sec.style.display = any ? '' : 'none';
+    });
+  }
+  if (input){
+    input.addEventListener('input', function(){
+      clearTimeout(timer);
+      timer = setTimeout(doSearch, 160);
+    });
+  }
+
+  // 加入计划按钮：轻提示
+  var planBtn = document.getElementById('planBtn');
+  if (planBtn){
+    planBtn.addEventListener('click', function(){
+      planBtn.textContent = '已加入';
+      planBtn.disabled = true;
+      planBtn.style.opacity = '.7';
+      planBtn.style.cursor = 'default';
+    });
+  }
+})();
+</script>
+</body>
+      </html>
